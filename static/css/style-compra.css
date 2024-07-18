@@ -1,0 +1,16 @@
+body {
+    height: 100vh;
+    background-image: url(../img/pago.webp); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; /
+}
+
+
+.container {
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px; 
+    max-width: 400px; 
+    margin: 100px auto; 
+}

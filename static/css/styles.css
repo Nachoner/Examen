@@ -1,0 +1,82 @@
+main {
+    flex: 1; /* Esto asegura que el contenido principal tome el espacio disponible /
+    padding: 20px; / Espacio deseado entre el contenido y el footer */
+}
+
+
+
+
+body{
+    background-image: url(../img/walmart.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+*{
+
+    margin: 0 0;
+}
+
+.img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.img_logo{
+    height: 100px;
+    width: 100px;
+}
+
+.centrar_card{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.img-ajuste{
+    width: 500px;
+    height: 400px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container-compra{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 50px;
+    border-radius: .9rem;
+}
+
+.contenido-compra{
+    margin-left: 10px;
+}
+
+.footer{
+    background-color: rgb(179, 104, 23);
+    font-family: "Nunito", sans-serif;
+    text-transform: capitalize;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: 50px;
+}
+.container-footer{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}

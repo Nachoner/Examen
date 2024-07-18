@@ -1,0 +1,41 @@
+.card {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+.alert {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    z-index: 1100;
+}
+@media (max-width: 576px) {
+    .cart-icon {
+        top: 10px;
+        right: 10px;
+    }
+    .modal-lg {
+        max-width: 90%;
+    }
+    .table {
+        font-size: 0.8rem;
+    }
+    .cart-count {
+        top: -5px;
+        right: -5px;
+    }
+}

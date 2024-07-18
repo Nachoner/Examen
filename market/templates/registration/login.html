@@ -1,0 +1,126 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("{% static 'img/walmart.png' %}");
+            background-size: cover; 
+            background-position: center; 
+            margin: 0;
+            padding-top: 60px; 
+            height: 100vh;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+        }
+        .header {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000; 
+        }
+        .header .container {
+            padding: 10px 20px;
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .login-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #45a049;
+        }
+        .login-container a {
+            color: rgb(148, 180, 170);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'img/logo.jpg' %}" alt="Logo" height="30">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'verduras' %}">Verduras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{% url 'frutas' %}">Frutas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{% url 'frutosecos' %}">Frutos Secos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" class="form-control" name="username" placeholder="Nombre de Usuario" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Contraseña" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+            <br></br>
+             <a class=" " href="{% url 'registrar' %}">Registrarse</a>
+        </form>
+    </div>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
